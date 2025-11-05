@@ -1,122 +1,242 @@
-# Bühler Online Store# Bühler Online Store# Vue 3 + Vite
+# Bühler Online Store# Bühler Online Store# Bühler Online Store# Vue 3 + Vite
 
 
 
-A modern single-page web application that allows Bühler customers to explore industrial products and place orders online. Built with Vue.js 3 and Vite.
+An online store application for Bühler industrial products built with Vue.js 3.
 
 
 
-![Vue.js](https://img.shields.io/badge/Vue.js-3.5.22-4FC08D?style=flat&logo=vue.js&logoColor=white)A modern single-page web application built with Vue.js that allows Bühler customers to explore industrial products and place orders online.This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-![Vite](https://img.shields.io/badge/Vite-7.2.0-646CFF?style=flat&logo=vite&logoColor=white)
-
-![License](https://img.shields.io/badge/License-MIT-green.svg)
+## FeaturesA modern single-page web application that allows Bühler customers to explore industrial products and place orders online. Built with Vue.js 3 and Vite.
 
 
-
----## 🎯 FeaturesLearn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
-
-
-
-## 🎯 Features
 
 ### Header
 
-### ✨ Core Functionality- **Bühler Logo**: Clickable logo that navigates to the product list page
+- Bühler logo (click to go home)
 
-- **Live Date & Time**: Real-time display of current date and time
+- Live date and time display![Vue.js](https://img.shields.io/badge/Vue.js-3.5.22-4FC08D?style=flat&logo=vue.js&logoColor=white)A modern single-page web application built with Vue.js that allows Bühler customers to explore industrial products and place orders online.This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+
+- Shopping cart with item count
+
+![Vite](https://img.shields.io/badge/Vite-7.2.0-646CFF?style=flat&logo=vite&logoColor=white)
+
+### Product List
+
+Products are organized by category:![License](https://img.shields.io/badge/License-MIT-green.svg)
+
+- Roller Machines
+
+- Optical Sorters
+
+- Dryer Systems
+
+- Die Casting Machines---## 🎯 FeaturesLearn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+
+
+
+Each product card shows the product image, name, category, price, and an "Add to Cart" button.
+
+
+
+### Product Details## 🎯 Features
+
+Click any product to view detailed information including:
+
+- Product image### Header
+
+- Name and category
+
+- Price### ✨ Core Functionality- **Bühler Logo**: Clickable logo that navigates to the product list page
+
+- Product description
+
+- Features list- **Live Date & Time**: Real-time display of current date and time
+
+- Add to Cart option
 
 #### Header Component- **Shopping Cart**: Shows cart item count with navigation to checkout
 
-- **Bühler Logo** - Clickable logo that navigates to the product list page
+### Checkout
 
-- **Live Date & Time** - Real-time clock display that updates every second### Product List
+View your shopping cart with:- **Bühler Logo** - Clickable logo that navigates to the product list page
 
-- **Shopping Cart** - Shows cart item count with badge, navigates to checkout- Section-wise product categorization (Milling, Sorting, Packaging, etc.)
+- List of items with images and prices
+
+- Quantity adjustment controls- **Live Date & Time** - Real-time clock display that updates every second### Product List
+
+- Remove items option
+
+- Order summary with subtotal, tax, and total- **Shopping Cart** - Shows cart item count with badge, navigates to checkout- Section-wise product categorization (Milling, Sorting, Packaging, etc.)
+
+- Place order functionality
 
 - Product cards displaying:
 
+## Setup
+
 #### Product List Page  - Product image
 
-- **Section-wise Organization** - Products grouped by category:  - Product name and type
+### Prerequisites
+
+- Node.js (v18 or higher)- **Section-wise Organization** - Products grouped by category:  - Product name and type
+
+- npm
 
   - Roller Machines (5 products)  - Price
 
+### Installation
+
   - Optical Sorters (4 products)  - Add to Cart button
 
-  - Dryer Systems (4 products)- Responsive grid layout
+```bash
 
-  - Die Casting Machines (1 product)- Click on product card to view details
+# Clone the repository  - Dryer Systems (4 products)- Responsive grid layout
 
-- **Product Cards** displaying:
+git clone https://github.com/jaicks007/buhler-online-store.git
 
-  - Product image (real Bühler products)### Product Details
+cd buhler-online-store  - Die Casting Machines (1 product)- Click on product card to view details
 
-  - Product name- Dynamic routing (`/products/{productId}`)
 
-  - Category type- Comprehensive product information:
 
-  - Price  - Large product image
+# Install dependencies- **Product Cards** displaying:
+
+npm install
+
+```  - Product image (real Bühler products)### Product Details
+
+
+
+### Running the Application  - Product name- Dynamic routing (`/products/{productId}`)
+
+
+
+```bash  - Category type- Comprehensive product information:
+
+# Start development server
+
+npm run dev  - Price  - Large product image
+
+```
 
   - Add to Cart button with visual feedback  - Name, type, and ID
 
+The app will run at `http://localhost:5173`
+
 - **Responsive Grid Layout** - Adapts to all screen sizes  - Detailed description
+
+### Build for Production
 
 - **Interactive Cards** - Click to view product details  - Price
 
-  - Key features list
+```bash
+
+# Create production build  - Key features list
+
+npm run build
 
 #### Product Details Page- Add to Cart functionality
 
-- **Dynamic Routing** - Each product has unique URL (`/products/{productId}`)- Back navigation to product list
+# Preview production build
+
+npm run preview- **Dynamic Routing** - Each product has unique URL (`/products/{productId}`)- Back navigation to product list
+
+```
 
 - **Comprehensive Information**:- Quick checkout option
 
+## Project Structure
+
   - Large product image
 
-  - Product name and category### Checkout
+```
 
-  - Product ID- Shopping cart summary with all added items
+buhler-online-store/  - Product name and category### Checkout
 
-  - Detailed description- Each cart item displays:
+├── public/
 
-  - Price display  - Product image
+│   └── products.json       # Product data  - Product ID- Shopping cart summary with all added items
 
-  - Key features list  - Name and type
+├── src/
 
-- **Actions**:  - Quantity controls (increase/decrease)
+│   ├── components/  - Detailed description- Each cart item displays:
 
-  - Add to Cart button  - Individual price
+│   │   └── Header.vue      # Header component
 
-  - Back to Products button  - Subtotal
+│   ├── composables/  - Price display  - Product image
 
-  - Quick Checkout option  - Remove from cart option
+│   │   ├── useCart.js      # Cart state management
 
-- Order summary:
+│   │   └── useDateTime.js  # Date/time functionality  - Key features list  - Name and type
+
+│   ├── router/
+
+│   │   └── index.js        # Route definitions- **Actions**:  - Quantity controls (increase/decrease)
+
+│   ├── views/
+
+│   │   ├── ProductList.vue    # Product listing page  - Add to Cart button  - Individual price
+
+│   │   ├── ProductDetails.vue # Product detail page
+
+│   │   └── Checkout.vue       # Cart and checkout page  - Back to Products button  - Subtotal
+
+│   ├── App.vue
+
+│   ├── main.js  - Quick Checkout option  - Remove from cart option
+
+│   └── style.css
+
+└── vite.config.js- Order summary:
+
+```
 
 #### Checkout Page  - Total items count
 
+## Technologies Used
+
 - **Shopping Cart Management**:  - Subtotal
 
-  - List of all cart items with images, names, and prices  - Tax calculation (8%)
+- **Vue.js 3** - JavaScript framework
 
-  - Quantity controls (increase/decrease)  - Grand total
+- **Vue Router** - Routing  - List of all cart items with images, names, and prices  - Tax calculation (8%)
 
-  - Remove item functionality- Continue shopping option
+- **Vite** - Build tool
 
-  - Individual and subtotal prices- Place order functionality
+- **Composition API** - Vue 3 feature for better code organization  - Quantity controls (increase/decrease)  - Grand total
 
-- **Order Summary**:
 
-  - Total items count## 🚀 Getting Started
 
-  - Subtotal calculation
+## Product Data  - Remove item functionality- Continue shopping option
 
-  - Tax calculation (8%)### Prerequisites
+
+
+The application displays 14 Bühler industrial products across 4 categories. Product data is stored in `/public/products.json`.  - Individual and subtotal prices- Place order functionality
+
+
+
+## Assignment Requirements- **Order Summary**:
+
+
+
+This project meets all the requirements:  - Total items count## 🚀 Getting Started
+
+
+
+✅ Header with logo, date/time, and cart  - Subtotal calculation
+
+✅ Product list with section-wise organization  
+
+✅ Product details with unique URLs    - Tax calculation (8%)### Prerequisites
+
+✅ Checkout with cart management and totals
 
   - Grand total
 
+## Author
+
 - **Actions**:- **Node.js**: Version 18.x or higher recommended (current: 20.15.0)
+
+Created for Bühler assignment submission
 
   - Continue Shopping button- **npm**: Version 9.x or higher
 
